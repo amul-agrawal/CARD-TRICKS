@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/CARD-TRICKS/static/css/main.b5211b2e.chunk.css",
-    "main.js": "/CARD-TRICKS/static/js/main.172e5fc5.chunk.js",
-    "main.js.map": "/CARD-TRICKS/static/js/main.172e5fc5.chunk.js.map",
+    "main.js": "/CARD-TRICKS/static/js/main.d845a408.chunk.js",
+    "main.js.map": "/CARD-TRICKS/static/js/main.d845a408.chunk.js.map",
     "runtime-main.js": "/CARD-TRICKS/static/js/runtime-main.d0188df3.js",
     "runtime-main.js.map": "/CARD-TRICKS/static/js/runtime-main.d0188df3.js.map",
     "static/css/2.9be3c371.chunk.css": "/CARD-TRICKS/static/css/2.9be3c371.chunk.css",
     "static/js/2.05e85e13.chunk.js": "/CARD-TRICKS/static/js/2.05e85e13.chunk.js",
     "static/js/2.05e85e13.chunk.js.map": "/CARD-TRICKS/static/js/2.05e85e13.chunk.js.map",
     "index.html": "/CARD-TRICKS/index.html",
-    "precache-manifest.ea09c4302f46aba449d2ddb227d39941.js": "/CARD-TRICKS/precache-manifest.ea09c4302f46aba449d2ddb227d39941.js",
+    "precache-manifest.428036dd70a66bab6c5e89bd7f265040.js": "/CARD-TRICKS/precache-manifest.428036dd70a66bab6c5e89bd7f265040.js",
     "service-worker.js": "/CARD-TRICKS/service-worker.js",
     "static/css/2.9be3c371.chunk.css.map": "/CARD-TRICKS/static/css/2.9be3c371.chunk.css.map",
     "static/css/main.b5211b2e.chunk.css.map": "/CARD-TRICKS/static/css/main.b5211b2e.chunk.css.map",
@@ -109,6 +109,6 @@
     "static/css/2.9be3c371.chunk.css",
     "static/js/2.05e85e13.chunk.js",
     "static/css/main.b5211b2e.chunk.css",
-    "static/js/main.172e5fc5.chunk.js"
+    "static/js/main.d845a408.chunk.js"
   ]
 }

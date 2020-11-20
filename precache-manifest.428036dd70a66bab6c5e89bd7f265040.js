@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63efc42f79de4884e988aacb0b4dc274",
+    "revision": "f03cb38e90e32b3a6015b01dad280d74",
     "url": "/CARD-TRICKS/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CARD-TRICKS/static/css/2.9be3c371.chunk.css"
   },
   {
-    "revision": "1ad1ccda1fbd28914296",
+    "revision": "a7cfb13020f6d62e3dbe",
     "url": "/CARD-TRICKS/static/css/main.b5211b2e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CARD-TRICKS/static/js/2.05e85e13.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1ad1ccda1fbd28914296",
-    "url": "/CARD-TRICKS/static/js/main.172e5fc5.chunk.js"
+    "revision": "a7cfb13020f6d62e3dbe",
+    "url": "/CARD-TRICKS/static/js/main.d845a408.chunk.js"
   },
   {
     "revision": "62b32d804eaf17f087ea",
