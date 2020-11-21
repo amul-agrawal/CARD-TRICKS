@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c79d500c1770e2a023632fb56ef451e3",
+    "revision": "858b164a9b773aa47adfc848cf00f889",
     "url": "/CARD-TRICKS/index.html"
   },
   {
-    "revision": "3d2e746d4c9d1211c6c3",
+    "revision": "913bcc5067ddead9781b",
     "url": "/CARD-TRICKS/static/css/2.9be3c371.chunk.css"
   },
   {
-    "revision": "c66d60c0914724f56204",
-    "url": "/CARD-TRICKS/static/css/main.b5211b2e.chunk.css"
+    "revision": "8207ac37504d624e3a93",
+    "url": "/CARD-TRICKS/static/css/main.cb1ad2b6.chunk.css"
   },
   {
-    "revision": "3d2e746d4c9d1211c6c3",
-    "url": "/CARD-TRICKS/static/js/2.673994f6.chunk.js"
+    "revision": "913bcc5067ddead9781b",
+    "url": "/CARD-TRICKS/static/js/2.a4a38562.chunk.js"
   },
   {
     "revision": "896a8804d0288c86859ec9465c44ad4a",
-    "url": "/CARD-TRICKS/static/js/2.673994f6.chunk.js.LICENSE.txt"
+    "url": "/CARD-TRICKS/static/js/2.a4a38562.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c66d60c0914724f56204",
-    "url": "/CARD-TRICKS/static/js/main.2b836d71.chunk.js"
+    "revision": "8207ac37504d624e3a93",
+    "url": "/CARD-TRICKS/static/js/main.5f10611a.chunk.js"
   },
   {
     "revision": "62b32d804eaf17f087ea",
@@ -106,6 +106,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a762540d55018bcf43ffba8b6343c9c9",
     "url": "/CARD-TRICKS/static/media/27.a762540d.png"
+  },
+  {
+    "revision": "6b36e503a7a570c6947796f7817a3012",
+    "url": "/CARD-TRICKS/static/media/27card_logic1.6b36e503.jpg"
+  },
+  {
+    "revision": "cd72cf3fe701442b76f784f8b2de6c80",
+    "url": "/CARD-TRICKS/static/media/27card_logic2.cd72cf3f.jpg"
+  },
+  {
+    "revision": "0ec447116081b238cdcb71a704ecfddb",
+    "url": "/CARD-TRICKS/static/media/27card_logic3.0ec44711.jpg"
+  },
+  {
+    "revision": "d97f7cb67b0e4b9a6aa94da3d88ee15b",
+    "url": "/CARD-TRICKS/static/media/27card_logic4.d97f7cb6.jpg"
+  },
+  {
+    "revision": "0a83b65cba7518cec2951fc041594a3e",
+    "url": "/CARD-TRICKS/static/media/27card_logic5.0a83b65c.jpg"
+  },
+  {
+    "revision": "9b1f0ba48635805dbb0555e6370c7d13",
+    "url": "/CARD-TRICKS/static/media/27card_logic6.9b1f0ba4.jpg"
   },
   {
     "revision": "cc4b61c33d7d58e096823b677819a218",
@@ -268,6 +292,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CARD-TRICKS/static/media/chart1.98791552.png"
   },
   {
+    "revision": "c450cc700031d265687e7541d349459c",
+    "url": "/CARD-TRICKS/static/media/chart1.c450cc70.png"
+  },
+  {
     "revision": "9a00ac3202875e1931c8cb18b53ebca0",
     "url": "/CARD-TRICKS/static/media/chart2.9a00ac32.png"
   },
@@ -276,12 +304,60 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CARD-TRICKS/static/media/chart3.2f93114e.png"
   },
   {
+    "revision": "c0cecc979e9126fe13f792fa88153166",
+    "url": "/CARD-TRICKS/static/media/chart4.c0cecc97.png"
+  },
+  {
+    "revision": "998d7b3a865db7b021b2433bbd269703",
+    "url": "/CARD-TRICKS/static/media/chart5.998d7b3a.png"
+  },
+  {
+    "revision": "118625ab742587088f181a50b2416b44",
+    "url": "/CARD-TRICKS/static/media/chart6.118625ab.png"
+  },
+  {
+    "revision": "c07f4451e8b32a394d700e6150c58e54",
+    "url": "/CARD-TRICKS/static/media/chart7.c07f4451.png"
+  },
+  {
+    "revision": "4ae263db1c471ad4b6be2a30081a1e08",
+    "url": "/CARD-TRICKS/static/media/chart8.4ae263db.png"
+  },
+  {
+    "revision": "69f50837431e5a5434e0758960c354da",
+    "url": "/CARD-TRICKS/static/media/chart9.69f50837.png"
+  },
+  {
     "revision": "a7be8f920de6aa8557de93b2ce405740",
     "url": "/CARD-TRICKS/static/media/chinese.a7be8f92.jpg"
   },
   {
     "revision": "88540332a52fd6dbd8de268d1338a200",
     "url": "/CARD-TRICKS/static/media/cityscape.88540332.gif"
+  },
+  {
+    "revision": "d39f870ac728e85f1b4cf08315fd5835",
+    "url": "/CARD-TRICKS/static/media/crt_logic1.d39f870a.jpg"
+  },
+  {
+    "revision": "bd7023ee16b406a4b0da259a81bc88a7",
+    "url": "/CARD-TRICKS/static/media/crt_logic2.bd7023ee.jpg"
+  },
+  {
+    "revision": "4c0c69b368d4dcc67a89af2a85ea382e",
+    "url": "/CARD-TRICKS/static/media/crt_logic3.4c0c69b3.jpg"
+  },
+  {
+    "revision": "310ccc2ce2b377bef3e86219581fc08f",
+    "url": "/CARD-TRICKS/static/media/crt_logic4.310ccc2c.jpg"
+  },
+  {
+    "revision": "270004fcb4f21dafb7eba646c2e512c6",
+    "url": "/CARD-TRICKS/static/media/crt_logic5.270004fc.jpg"
+  },
+  {
+    "revision": "894773afe264aa1a45742cf5d5e10554",
+    "url": "/CARD-TRICKS/static/media/crt_logic6.894773af.jpg"
   },
   {
     "revision": "45ccc923ffac67e02ace89054b6ca176",
