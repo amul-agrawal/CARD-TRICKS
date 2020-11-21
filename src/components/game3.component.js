@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import '../App.css';
 import Alert from 'react-s-alert';
 export default class GAME3 extends Component {

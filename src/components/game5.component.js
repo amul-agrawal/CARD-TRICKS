@@ -1,5 +1,5 @@
 import React, { Component, PureComponent } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Alert from "react-s-alert";
 
 var pictures = [];

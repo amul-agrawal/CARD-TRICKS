@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import HAND from './hand.component';
 let deck = Array.from({ length: 52 }, (_, i) => i + 1);
 function shuffle(array) {

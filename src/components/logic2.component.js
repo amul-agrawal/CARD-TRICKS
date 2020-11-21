@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import MathJax from 'react-mathjax2';
 
 export default class LOGIC2 extends Component {
