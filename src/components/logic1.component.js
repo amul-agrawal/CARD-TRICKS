@@ -78,7 +78,7 @@ export default class LOGIC1 extends Component {
 					</p>
 
 					<p>For this CRT trick to work the condition on <i>n</i> is such that:<br />
-						<center><MathJax.Node inline>{'n \equiv -1 (mod m) '}</MathJax.Node></center>
+						<center><MathJax.Node inline>{'n equiv -1 (mod m) '}</MathJax.Node></center>
 					Now lets see why this condition is important for our trick.<br />
 					</p>
 					<center><div>
@@ -107,7 +107,7 @@ export default class LOGIC1 extends Component {
 					</div></center>
 					<p>
 						Now we remove the top card from both the piles, that leaves us with <i>m - 1</i> cards in both the piles.<br />
-						So, similarly like before, to do the 'magic' we would need <MathJax.Node inline>{'h + r\equiv -1 (mod m-1) '}
+						So, similarly like before, to do the 'magic' we would need <MathJax.Node inline>{'h + requiv -1 (mod m-1) '}
 						</MathJax.Node>.<br /><br />
 						The same step will repeat till we have 1 card left, this gives this condition that must be followed for the magic to work:
 					</p>
@@ -170,13 +170,13 @@ export default class LOGIC1 extends Component {
 					This condition is followed in our magic trick, as <MathJax.Node inline>a_i = -1 \forall i \in bb N</MathJax.Node>.
 					</p>
 
-					<br /><center><img src={require(`../assets/crt_logic2.jpg`)} width="100%" /></center><br /><br />
+					<br /><center><img  alt="none" src={require(`../assets/crt_logic2.jpg`)} width="100%" /></center><br /><br />
 					<h3 class="logic-h3"><strong>Finding solution</strong></h3><br />
 					<p>
 						<ul>
 							<li><h4 class="logic-h4">Naive method</h4>
 								<p>We try for and check for each number from 1 to end, given we know that the solution exists, but this is very unoptimized.</p>
-								<br /><center><img src={require(`../assets/crt_logic3.jpg`)} width="100%" /></center><br /><br />
+								<br /><center><img alt="none" src={require(`../assets/crt_logic3.jpg`)} width="100%" /></center><br /><br />
 								<p>The inner loop runs for <i>k</i> times and the outer one runs till the answer is reached. And the answer
 								increases very rapidly with the increase in number of equations.<br />
 									<strong>Complexity:</strong> <i>O(mk)</i>, where <i>m = prod(num[1],num[2],...,num[k])</i><br />
@@ -185,7 +185,7 @@ export default class LOGIC1 extends Component {
 							<li><h4 class="logic-h4">Better method</h4>
 								<p>We can see that <i>x</i>(the solution) can be given as shown below. If we take the mod with any number now
 								we get the required remainder.</p>
-								<br /><center><img src={require(`../assets/crt_logic4.jpg`)} height="400px" width="600px" /></center><br /><br />
+								<br /><center><img  alt="none" src={require(`../assets/crt_logic4.jpg`)} height="400px" width="600px" /></center><br /><br />
 								<p>The inner loop runs for <i>k</i> times and the outer one runs till the answer is reached. And the answer
 								increases very rapidly with the increase in number of equations.<br />
 									<strong>Complexity:</strong> <i>O(k log m)</i>, where <i>m = prod(num[1],num[2],...,num[k])</i><br />
@@ -221,8 +221,8 @@ export default class LOGIC1 extends Component {
 									Thus multiplicative inverse of <i>x</i> wrt <i>m</i> is <i>a</i> and vice versa.<br />
 								</p>
 							</li>
-							<br /><center><img src={require(`../assets/crt_logic5.jpg`)} height="400px" width="700px" /></center><br /><br />
-							<br /><center><img src={require(`../assets/crt_logic6.jpg`)} height="450px" width="700px" /></center><br /><br />
+							<br /><center><img  alt="none" src={require(`../assets/crt_logic5.jpg`)} height="400px" width="700px" /></center><br /><br />
+							<br /><center><img alt="none"  src={require(`../assets/crt_logic6.jpg`)} height="450px" width="700px" /></center><br /><br />
 
 						</ul>
 					</p>
@@ -282,7 +282,7 @@ export default class LOGIC1 extends Component {
 					</center></div><br />
 					<p>We can see that the length increases rapidly even with small </p>
 
-					<br /><center><img src={require(`../assets/crt_logic1.jpg`)} height="80%" width="60%" /></center><br /><br />
+					<br /><center><img alt="none"  src={require(`../assets/crt_logic1.jpg`)} height="80%" width="60%" /></center><br /><br />
 
 
 					<br />

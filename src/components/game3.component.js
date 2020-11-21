@@ -33,7 +33,7 @@ export default class GAME3 extends Component {
             currentArray: [...this.state.currentArray,e],
             hintIndex: null,
         });
-        if(this.state.currentArray.length==this.state.totalCount-1){
+        if(this.state.currentArray.length===this.state.totalCount-1){
             // alert("Hellow");
             let temp = [...this.state.currentArray,e];
             for(let i=0;i<this.state.totalCount-1;i++){
@@ -66,7 +66,7 @@ export default class GAME3 extends Component {
     }
     NotisSq=e=>{
         for(let i = 1;;i++){
-            if(i*i==e) return false;
+            if(i*i===e) return false;
             if(i*i>e) return true;
         }
     }
@@ -86,20 +86,20 @@ export default class GAME3 extends Component {
             </h1>
 <br></br>
 <div style={{color:'rgb(241, 206, 7)'}}>
-    {this.state.level==2?`The previous case of five numbers was impossible to do. Try the following.`:''}
+    {this.state.level===2?`The previous case of five numbers was impossible to do. Try the following.`:''}
 </div>
 <br></br>
                 <div style={{marginRight:"20px"}} class="text-logic">
-                    Order the numbers from 1 to {`${this.state.level==1?'5':'15'}`} such that sum of any two adjacent numbers leads to a perfect square. Note that each number has to be used.
+                    Order the numbers from 1 to {`${this.state.level===1?'5':'15'}`} such that sum of any two adjacent numbers leads to a perfect square. Note that each number has to be used.
             </div>
             <br></br>
             <div style={{color:"white"}}>
                 {
                     this.state.availableArray.map((e)=>{
-                        if(e==this.state.hintIndex)
+                        if(e===this.state.hintIndex)
                         return <button className='c-btn' style={{backgroundColor:'rgb(241, 206, 7)',color:'black'}} onClick={()=>{this.pushElementToCurrentArray(e)}}>{e}</button>;
 
-                        if(this.state.currentArray.indexOf(e)!=-1)
+                        if(this.state.currentArray.indexOf(e)!==-1)
                         return <button className='c-btn' style={{color:'white',backgroundColor:'black'}}>{e}</button>;
                         else return <button className='c-btn' style={{backgroundColor:"white",color:"black"}} onClick={()=>{this.pushElementToCurrentArray(e)}}>{e}</button>;
                     })
@@ -111,7 +111,7 @@ export default class GAME3 extends Component {
                 {
                     this.state.currentArray.map((e,index)=>{
                         let temp = this.state.currentArray;
-                        let colr;
+                        // let colr;
                         if((index>0 && this.NotisSq(temp[index]+temp[index-1])) || (index<temp.length-1 && this.NotisSq(temp[index]+temp[index+1]) ))
                         return  <button style={{backgroundColor:"red",color:"white"}} className='c-btn' onClick={()=>{this.removeElementFromCurrentArray(index)}}>{e}</button>;
                         else 
@@ -127,7 +127,7 @@ export default class GAME3 extends Component {
                 {/* <br></br> */}
                 {/* <br></br> */}
                 <button className='btn btn-warning' onClick={()=>{
-                    if(this.state.level==1){
+                    if(this.state.level===1){
                         console.log('null')
 
                         this.setState({
@@ -139,7 +139,7 @@ export default class GAME3 extends Component {
 
                     }
                     else{
-                        if(JSON.stringify(this.state.currentArray)==JSON.stringify(this.ans1.slice(0,this.state.currentArray.length))){
+                        if(JSON.stringify(this.state.currentArray)===JSON.stringify(this.ans1.slice(0,this.state.currentArray.length))){
                             console.log(this.ans1[this.state.currentArray.length]);
                             console.log(this.ans1)
                             this.setState({
@@ -147,7 +147,7 @@ export default class GAME3 extends Component {
                                 hintIndex : this.ans1[this.state.currentArray.length],
                             })
                         }
-                        else if(JSON.stringify(this.state.currentArray)==JSON.stringify(this.ans2.slice(0,this.state.currentArray.length))){
+                        else if(JSON.stringify(this.state.currentArray)===JSON.stringify(this.ans2.slice(0,this.state.currentArray.length))){
                             console.log(this.ans2[this.state.currentArray.length]);
                             console.log(this.ans2)
 
@@ -161,7 +161,7 @@ export default class GAME3 extends Component {
                             console.log(this.ans2)
                             console.log(this.state.currentArray)
                             console.log(this.ans1.slice(0,this.state.currentArray.length))
-                            console.log(this.state.currentArray==this.ans1.slice(0,this.state.currentArray.length))
+                            console.log(this.state.currentArray===this.ans1.slice(0,this.state.currentArray.length))
 
                             console.log('null3')
                             this.setState({

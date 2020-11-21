@@ -65,7 +65,7 @@ export default class Products extends Component {
 
         var arr = this.state.selected_indices.slice()
 
-        if (arr.length != 2 || (this.state.cards1[arr[0]] == this.state.cards1[arr[1]])) {
+        if (arr.length !== 2 || (this.state.cards1[arr[0]] === this.state.cards1[arr[1]])) {
             Alert.error("Invalid Move",
                 {
                     beep: true,
@@ -87,21 +87,21 @@ export default class Products extends Component {
         })
         var cards2 = []
         for (var i = 0; i < this.state.cards1.length; i++) {
-            if (arr.indexOf(i) == -1)
+            if (arr.indexOf(i) === -1)
                 cards2.push(this.state.cards1[i]);
         }
         console.log(arr);
         console.log(cards2);
 
         this.setState({ cards1: cards2, selected_indices: [] });
-        if (this.state.Player == "Player1") {
+        if (this.state.Player === "Player1") {
             this.setState({ Player: "Player2" });
         }
         else
             this.setState({ Player: "Player1" });
         var possible = false;
-        for (var i = 0; i < cards2.length - 1; i++) {
-            if (cards2[i] != cards2[i + 1]) {
+        for (var j = 0; j < cards2.length - 1; j++) {
+            if (cards2[j] !== cards2[j + 1]) {
                 possible = true;
                 break;
             }
@@ -113,7 +113,7 @@ export default class Products extends Component {
     }
     Loose = () => {
 
-        if (this.state.Player == "Player1")
+        if (this.state.Player === "Player1")
             Alert.success("Player2 Wins",
                 {
                     beep: true,
@@ -168,8 +168,8 @@ export default class Products extends Component {
                     {
                         (() => {
                             if (this.state.Player === "Player2")
-                                return <img src={require('../assets/man.png')} width='40px'></img>
-                            else return <img src={require('../assets/woman.png')} width='40px'></img>
+                                return <img alt="none" src={require('../assets/man.png')} width='40px'></img>
+                            else return <img alt="none" src={require('../assets/woman.png')} width='40px'></img>
 
                         })()
                     }
@@ -179,9 +179,9 @@ export default class Products extends Component {
                     display: "flex", flexWrap: "wrap"
                      }}>
                     {this.state.cards1.map((char, index) => {
-                        if (this.state.selected_indices.indexOf(index) != -1) {
+                        if (this.state.selected_indices.indexOf(index) !== -1) {
                             return  <button style={{ border: 'none', backgroundColor:'transparent' }} onClick={() => {
-                                if (this.state.selected_indices.indexOf(index) != -1)
+                                if (this.state.selected_indices.indexOf(index) !== -1)
                                     this.setState({
                                         selected_indices: [...this.state.selected_indices.slice(0,this.state.selected_indices.indexOf(index)),
                                             ...this.state.selected_indices.slice(this.state.selected_indices.indexOf(index)+1)
@@ -191,20 +191,20 @@ export default class Products extends Component {
 
                             }}>
                             <div className='kingqueen-card' class={`${index} kingqueen-card `} style={{ boxShadow: "0 0 20px yellow" }} >
-                                <img src={char == '0' ? this.state.kings[index] : this.state.queens[index]} width="100px"></img>
+                                <img alt="none" src={char === '0' ? this.state.kings[index] : this.state.queens[index]} width="100px"></img>
                             </div></button>;
                         }
                         return (
                          
 
                             <button style={{ border: 'none', backgroundColor:'transparent' }} onClick={() => {
-                                if (this.state.selected_indices.indexOf(index) == -1)
+                                if (this.state.selected_indices.indexOf(index) === -1)
                                     this.setState({
                                         selected_indices: [...this.state.selected_indices, index],
                                     })
 
                             }}><div className='kingqueen-card' class={`${index} kingqueen-card`} >
-                                    <img src={char == '0' ? this.state.kings[index] : this.state.queens[index]} width="100px"></img>
+                                    <img alt="none" src={char === '0' ? this.state.kings[index] : this.state.queens[index]} width="100px"></img>
                                 </div></button>
                         )
                     }
@@ -229,7 +229,7 @@ export default class Products extends Component {
                             for (let i = 1; i < this.state.cards1.length; i++) {
                                 let a = this.state.cards1[i - 1];
                                 let b = this.state.cards1[i];
-                                if (a != b) {
+                                if (a !== b) {
                                     console.log(i - 1, i);
                                     this.setState({
                                         selected_indices: [i - 1, i],

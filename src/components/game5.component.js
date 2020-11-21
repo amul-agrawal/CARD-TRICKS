@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from "react";
+import React, { Component} from "react";
 // import axios from "axios";
 import Alert from "react-s-alert";
 
@@ -22,6 +22,7 @@ function Square(props) {
       className={props.class}
       src={require(`../card_pics/${myimg}`)}
       onClick={props.onClick}
+      alt="none"
     />
   );
 }
@@ -34,6 +35,7 @@ function Trap(props) {
       className={props.class}
       src={require(`../assets/spider.png`)}
       onClick={props.onClick}
+      alt="none"
     />
   );
 }
@@ -50,7 +52,7 @@ class Board extends React.Component {
     this.arr = [];
     for (let i = 1; i <= 52; ) {
       let r = randomint();
-      if (this.arr.indexOf(r) == -1) {
+      if (this.arr.indexOf(r) === -1) {
         this.arr.push(r);
         i++;
       } else continue;
@@ -60,14 +62,14 @@ class Board extends React.Component {
   }
   handleClick(i) {
     // console.log(i);
-    // if(this.props.trapid==-1)
+    // if(this.props.trapid===-1)
     // {
     //   this.trapset();
     // }
     
     first = i;
-    if(this.state.fixed==0){
-      if (this.state.selarr.indexOf(i) == -1)
+    if(this.state.fixed===0){
+      if (this.state.selarr.indexOf(i) === -1)
         this.setState({
           selarr: [i],
           // selarr: [...this.state.selarr, i],
@@ -82,7 +84,7 @@ class Board extends React.Component {
           set: 1,
         });
     }else{
-      if (this.state.selarr.indexOf(i) == -1)
+      if (this.state.selarr.indexOf(i) === -1)
       this.setState({
         selarr: [...this.state.selarr, i],
         set: 1,
@@ -99,12 +101,12 @@ class Board extends React.Component {
   }
 
   nextstep(i) {
-    if(this.state.set==0){
+    if(this.state.set===0){
         Alert.error("Please select card from first row", { offset: 125 });
       return;
     }
     // console.log(this.props.trapid);
-    if(this.state.fixed==0){
+    if(this.state.fixed===0){
       this.setState({
         fixed: 1,
       });
@@ -120,7 +122,7 @@ class Board extends React.Component {
     // console.log(next); // index in array
     if (next + loop >= 52) {
       Alert.success("Walk complete", { offset: 125 });
-      if (next != trapid) {
+      if (next !== trapid) {
         Alert.error("Trap avoided", { offset: 125 });
       }
       return;
@@ -129,13 +131,13 @@ class Board extends React.Component {
     loop = this.arr[next + loop];
     let nextrow = Math.floor(this.arr.indexOf(loop) / 7);
     console.log(`rows:`,currow,nextrow);
-    if((currow-nextrow)==2){
+    if((currow-nextrow)===2){
       document.getElementById("devdiv").scrollTop += 125;
     }
     else if(currow<nextrow){
       document.getElementById("devdiv").scrollTop += 100;
     }
-    else if(currow==nextrow){
+    else if(currow===nextrow){
       document.getElementById("devdiv").scrollTop += 50;
     }
     this.handleClick(loop);
@@ -160,9 +162,9 @@ class Board extends React.Component {
   }
   renderSquare(i) {
     // console.log(this.props.trapid);
-    if (this.state.fixed == 0) {
+    if (this.state.fixed === 0) {
       if (this.arr.indexOf(i) < 7) {
-        if (this.state.selarr.indexOf(i) == -1) {
+        if (this.state.selarr.indexOf(i) === -1) {
         return (
           <Square class={"mycard"} id={i} onClick={() => this.handleClick(i)} />
         );
@@ -175,14 +177,14 @@ class Board extends React.Component {
         return <Square class={"mycard"} id={i} />;
       }
     } else {
-      if (this.state.selarr.indexOf(i) == -1) {
-        if (this.arr.indexOf(i) == trapid) {
+      if (this.state.selarr.indexOf(i) === -1) {
+        if (this.arr.indexOf(i) === trapid) {
           return <Square class={"trap"} id={i} onClick={() => this.handleClick(i)}/>;
         }else {
           return <Square class={"mycard"} id={i} onClick={() => this.handleClick(i)}/>;
         }
       } else {
-        if (this.arr.indexOf(i) == trapid) {
+        if (this.arr.indexOf(i) === trapid) {
           return <Trap class={"trap"} id={i} onClick={() => this.handleClick(i)}/>;
         } else {
           return <Square class={"mycard-bold"} id={i} />;
@@ -192,10 +194,10 @@ class Board extends React.Component {
   }
  
   render() {
-    if(trapid==-1)
+    if(trapid===-1)
     this.trapset();
 
-    if (this.state.fixed == 0) {
+    if (this.state.fixed === 0) {
       return (
         <div>
           <p>Trap card:</p>
@@ -294,7 +296,7 @@ export default class GAME5 extends Component {
     // value = num;
     console.log(num);
     for (let i = 0; i <= 52; i++) {
-      if (i % 13 >= 11 || i % 13 == 0) {
+      if (i % 13 >= 11 || i % 13 === 0) {
         steps.push(num);
       } else {
         steps.push(i % 13);
@@ -317,7 +319,7 @@ export default class GAME5 extends Component {
     window.location.reload(false);
   };
   render() {
-    if (this.state.stage == 1) {
+    if (this.state.stage === 1) {
       return (
         <div style={{paddingTop: "100px"}}>
           <button
@@ -382,7 +384,7 @@ export default class GAME5 extends Component {
         </div>
         
       );
-    } else if (this.state.stage == 2) {
+    } else if (this.state.stage === 2) {
       return (
         <div style={{paddingTop: "100px"}}>
           <button

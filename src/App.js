@@ -33,19 +33,19 @@ function App() {
 
           <div className="navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <Link to="/" className={``}
-              className={`${active==0?"nav-ele-active":'nav-ele'}`}
+              <Link to="/" 
+              className={`${active===0?"nav-ele-active":"nav-ele"}`}
 
               onClick={()=>{
                 setActive(0);
               }}>
               <strong>ARENA</strong></Link>
-              <Link to="/Play" className={`${active==1?"nav-ele-active":'nav-ele'}`} 
+              <Link to="/Play" className={`${active===1?"nav-ele-active":'nav-ele'}`} 
              
               onClick={()=>{
                 setActive(1);
               }}>Play</Link>
-              <Link to="/AboutUs" className={`${active==2?"nav-ele-active":'nav-ele'}`} 
+              <Link to="/AboutUs" className={`${active===2?"nav-ele-active":'nav-ele'}`} 
              
               onClick={()=>{
                 setActive(2);

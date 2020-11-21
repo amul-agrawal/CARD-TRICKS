@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import '../App.css';
 import HAND from './hand.component';
-import { PassThrough } from 'stream';
+// import { PassThrough } from 'stream';
 import Alert from 'react-s-alert';
 export default class Products extends Component {
 
@@ -19,7 +19,7 @@ export default class Products extends Component {
     }
     getGCD = (a, b) => {
         if (a > b) return this.getGCD(b, a);
-        if (a == 0) return b;
+        if (a === 0) return b;
         return this.getGCD(b % a, a);
     }
     getMagicNumber = n => {
@@ -64,7 +64,7 @@ export default class Products extends Component {
             this.state.cards1.shift();
             this.state.cards2.shift();
             this.setState({ total_count: 0 });
-            if (this.state.cards1.length == 1) {
+            if (this.state.cards1.length === 1) {
                 let check = window.confirm("Game Over \n Play again? ")
                 if (check) {
                     this.setState({ cards1: [1, 2, 3, 4], cards2: [4, 3, 2, 1], total_count: 0, limit: 11 })
@@ -90,7 +90,7 @@ export default class Products extends Component {
             this.state.cards1.shift();
             this.state.cards2.shift();
             this.setState({ total_count: 0 });
-            if (this.state.cards1.length == 1) {
+            if (this.state.cards1.length === 1) {
                 if (window.confirm("Game Over !! \n Play Again ? ")) {
 
                     this.setState({ cards1: [1, 2, 3, 4], cards2: [4, 3, 2, 1], total_count: 0, limit: 11 })
@@ -123,7 +123,7 @@ export default class Products extends Component {
                     <div className='comp-2-set'>
                         <span>
                             <button className="comp-2-btn" onClick={this.Shuffle_left}>
-                                <img src={require(`../assets/left-arrow.png`)} width="30px"></img>
+                                <img alt="none" src={require(`../assets/left-arrow.png`)} width="30px"></img>
                             </button>
                         </span>
                         <div className='comp-2-card-set' style={{
@@ -140,7 +140,7 @@ export default class Products extends Component {
                     <div className='comp-2-set'>
                         <span>
                             <button className="comp-2-btn" onClick={this.Shuffle_right}>
-                                <img src={require(`../assets/left-arrow.png`)} width="30px"></img>
+                                <img alt="none" src={require(`../assets/left-arrow.png`)} width="30px"></img>
                             </button>
                         </span>
                         <div className='comp-2-card-set' style={{

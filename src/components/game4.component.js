@@ -57,33 +57,33 @@ export default class GAME4 extends Component {
         let arr = numToBaseThree(this.state.favNum - 1);
         let stateNum = this.state.stage - 3;
         let index = arr[stateNum];
-        if (index == 0) {
-            if (e == 1)
+        if (index === 0) {
+            if (e === 1)
                 deck = [...this.state.deck1, ...this.state.deck2, ...this.state.deck3];
-            else if (e == 2)
+            else if (e === 2)
                 deck = [...this.state.deck2, ...this.state.deck1, ...this.state.deck3];
             else
                 deck = [...this.state.deck3, ...this.state.deck2, ...this.state.deck1];
         }
-        else if (index == 1) {
-            if (e == 1)
+        else if (index === 1) {
+            if (e === 1)
                 deck = [...this.state.deck2, ...this.state.deck1, ...this.state.deck3];
-            else if (e == 2)
+            else if (e === 2)
                 deck = [...this.state.deck1, ...this.state.deck2, ...this.state.deck3];
             else
                 deck = [...this.state.deck2, ...this.state.deck3, ...this.state.deck1];
         }
         else {
-            if (e == 1)
+            if (e === 1)
                 deck = [...this.state.deck3, ...this.state.deck2, ...this.state.deck1];
-            else if (e == 2)
+            else if (e === 2)
                 deck = [...this.state.deck3, ...this.state.deck1, ...this.state.deck2];
             else
                 deck = [...this.state.deck1, ...this.state.deck2, ...this.state.deck3];
         }
         let d1 = [], d2 = [], d3 = [];
         for (let i = 0; i < 27; i++) {
-            (i % 3 == 0) ? d1.push(deck[i]) : (i % 3 == 1) ? d2.push(deck[i]) : d3.push(deck[i]);
+            (i % 3 === 0) ? d1.push(deck[i]) : (i % 3 === 1) ? d2.push(deck[i]) : d3.push(deck[i]);
         }
         this.setState({
             stage: this.state.stage + 1,
@@ -137,7 +137,7 @@ export default class GAME4 extends Component {
                 {
                     (() => {
 
-                        if (this.state.stage == 1) {
+                        if (this.state.stage === 1) {
                             return <div>
                                 <br></br>
                                 <div class="text-logic">Pick a card from the deck given below and make sure to remember it!</div>
@@ -146,7 +146,7 @@ export default class GAME4 extends Component {
                                     border: 'none',
                                     backgroundColor: 'white',
                                 }} className='comp-3-btn'>
-                                    <img src={require('../assets/right-arrow.png')} width='30px' style={{ margin: "5px" }}></img>
+                                    <img src={require('../assets/right-arrow.png') } width='30px' style={{ margin: "5px" }} alt="none"></img>
                                     Next
                                 </button>
                                 <div style={{ left: '400px', display: 'flex', position: 'static', alignItems: 'center' }}>
@@ -156,7 +156,7 @@ export default class GAME4 extends Component {
                                 </div>
                             </div>;
                         }
-                        if (this.state.stage == 2) {
+                        if (this.state.stage === 2) {
                             return <div>
                                 <br></br>
                                 <div class="text-logic">Click on your favorite number</div>
@@ -178,7 +178,7 @@ export default class GAME4 extends Component {
                                 </div>
                             </div>
                         }
-                        if (this.state.stage == 3 || this.state.stage == 4 || this.state.stage == 5) {
+                        if (this.state.stage === 3 || this.state.stage === 4 || this.state.stage === 5) {
                             return <div>
                                 <br></br>
                                 <div class="text-logic">Choose the deck your card is present in.</div>
@@ -191,7 +191,7 @@ export default class GAME4 extends Component {
                                     {
                                         [1, 2, 3].map(
                                             (e) => {
-                                                let d = (e == 1) ? this.state.deck1 : (e == 2) ? this.state.deck2 : this.state.deck3;
+                                                let d = (e === 1) ? this.state.deck1 : (e === 2) ? this.state.deck2 : this.state.deck3;
                                                 return <div>
                                                     <div style={{ width: '200px', height: '200px' }}>
                                                         <HAND hand={d} width={150} margin={100} focused={-1} straight={1} />
@@ -214,7 +214,7 @@ export default class GAME4 extends Component {
                             </div>
 
                         }
-                        if (this.state.stage == 6) {
+                        if (this.state.stage === 6) {
                             return <div style={{
                                 position: 'relative',
                                 left: '200px',
@@ -231,7 +231,7 @@ export default class GAME4 extends Component {
                                 <br />
                                 <div class="text-logic">
                                     <br /> 
-                                    Your card is: <br /> <img src={require(`../card_pics/${deck[this.state.favNum - 1]}.png`)} width="100px"></img><br></br><br />
+                                    Your card is: <br /> <img src={require(`../card_pics/${deck[this.state.favNum - 1]}.png`)} width="100px" alt="none"></img><br></br><br />
                                     At the position {this.state.favNum} (Your Number) in the deck<br></br>
                                     <br></br>
                                     <button className='btn btn-outline-danger' onClick={

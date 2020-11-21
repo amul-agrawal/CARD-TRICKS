@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import axios from 'axios';
-import _img from '../assets/home.jpg';
+// import _img from '../assets/home.jpg';
 import '../App.css';
 import '../home.css';
 export default class WELCOME extends Component {

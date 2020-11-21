@@ -19,7 +19,7 @@ export default class LOGIC4 extends Component {
                         the 3 piles(i.e. keep the piles on top of each other in some particular order) and re draw the cards into new piles. The user again chooses the pile with his/her card. For the final time
                         the computer(magician) compiles the piles and re draw. The user chooses again. Now this time the magician takes all the
                         piles and draws the card, with user's chosen card at the place denoted by user’s chosen number.
-                        <br /><center><img src={require(`../assets/27card_logic1.jpg`)} width="75%" /></center>
+                        <br /><center><img src={require(`../assets/27card_logic1.jpg`)} width="75%" alt="none" /></center>
                     </p>
                     <h2 class="logic-h2"><strong>The Secret</strong></h2>
                     <h4 class="logic-h4">Seems interesting, right!! So lets see how is this done.</h4>
@@ -38,7 +38,7 @@ export default class LOGIC4 extends Component {
                     <p>
                         With the understanding that 2 = bottom, 1 = middle, and 0 = top, the number 14 becomes “bottom-middle-middle.”
                     </p>
-                    <br /><center><img src={require(`../assets/27card_logic6.jpg`)} height="90%" width="70%" /></center><br /><br />
+                    <br /><center><img src={require(`../assets/27card_logic6.jpg`)} height="90%" width="70%" alt="none" /></center><br /><br />
 
                     <p>
                         Now deal the cards into three piles. The player identifies the pile containing his/her card. That pile should be placed at the
@@ -71,7 +71,7 @@ export default class LOGIC4 extends Component {
                             The following table shows the good target positions, to which we can move every
                             card, and the base three string (to be read from right to left) that tells we how to pick
                             up the piles.<br />
-                                <br /><center><img src={require(`../assets/27card_logic2.jpg`)} width="90%" /></center><br />
+                                <br /><center><img src={require(`../assets/27card_logic2.jpg`)} width="90%" alt="none" /></center><br />
                                 Note that “111” is still the code for the middle (10th) position, even though it represents 13 in base three.
                             </p>
 
@@ -146,10 +146,10 @@ export default class LOGIC4 extends Component {
                             We use counting sort for this. Sort the elements based on the unit place digits <i>(X=0)</i>.</li>
                             <li>Now we repeat Step 2, for the tens place <i>(X=1)</i> and then the same for hundreds place <i>(X=2)</i></li>
                         </ol>
-                        <br /><center><img src={require(`../assets/27card_logic3.jpg`)} height="300px" width="300px" /></center>
+                        <br /><center><img src={require(`../assets/27card_logic3.jpg`)} height="300px" width="300px" alt="none" /></center>
                     </p>
                     <h4 class="logic-h4">Pseudo Code</h4>
-                    <br /><center><img src={require(`../assets/27card_logic4.jpg`)} width="75%" /></center><br />
+                    <br /><center><img src={require(`../assets/27card_logic4.jpg`)} width="75%" alt="none" /></center><br />
                     <br />
                     <h4 class="logic-h4">Complexity</h4><br />
                     <p>
@@ -163,7 +163,7 @@ export default class LOGIC4 extends Component {
                         So overall time complexity is <MathJax.Node inline>{`O((n+b) log_b max)`}</MathJax.Node>.
                         Which looks more than the time complexity of comparison-based sorting algorithms for a large <i>max</i>. Let us first
                         limit <i>max</i>.<br />
-                        Let <MathJax.Node inline>{`max\leq nc`}</MathJax.Node> where <i>c</i> is a constant. In that case, the complexity becomes
+                        Let <MathJax.Node inline>{`maxleq nc`}</MathJax.Node> where <i>c</i> is a constant. In that case, the complexity becomes
                         <MathJax.Node inline>{`O(nLog_b n)`}</MathJax.Node>.But it still doesn’t beat comparison-based sorting algorithms.<br />
                         What if we make the value of <i>b</i> larger?. What should be the value of <i>b</i> to make the time complexity linear?
                         If we set <i>b</i> as <i>n</i>, we get the time complexity as <i>O(n)</i>. In other words, we can sort an array of integers
@@ -201,7 +201,7 @@ export default class LOGIC4 extends Component {
 
                     </p><br />
                     <h4 class="logic-h4">Pseudo Code</h4>
-                    <br /><center><img src={require(`../assets/27card_logic5.jpg`)} width="75%" /></center><br /><br />
+                    <br /><center><img src={require(`../assets/27card_logic5.jpg`)} width="75%" alt="none" /></center><br /><br />
 
                     <h4 class="logic-h4">Complexity</h4>
                     <p> <u>Time Complexity</u>: <i>O(n+k)</i> where <i>n</i> is the number of elements in input array and <i>k</i>
