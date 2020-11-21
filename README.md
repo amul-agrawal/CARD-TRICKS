@@ -8,6 +8,8 @@
 5. Knight vs Knight (made by the team)
 6. Square Sum problem
 
+![](site.gif)
+
 ## Setup
 
 #### Install Node
